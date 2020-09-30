@@ -1,0 +1,23 @@
+#categoria{
+    padding-top: 20px;
+}
+
+
+.formprod{
+   /*width:60%; */
+   text-align: center;
+}
+
+
+
+.btnsXprod{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    padding-bottom:20px;
+}
+
+#btnagregar{
+    padding:50px;
+    margin:50px;
+}
