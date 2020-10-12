@@ -28,16 +28,7 @@
         <a class="nav-link" href="usuario">Usuario</a>
       </li>
     </ul>
-    <div class="btn-group">
-      <button type="button" class="btn btn-secondary btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Sesión <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu">
-         <li><button type="button" class="btn btn-secondary btn btn-light" id="login"><a href="login">LOGIN</a></button></li>
-         <li><button type="button" class="btn btn-secondary btn btn-light"id="logout"><a href="logout">LOGOUT</a></button></li>
-      </ul>
-    </div>
-     
+      <button type="button" class="btn btn-secondary btn btn-light"id="logout"><a href="logout">LOGOUT</a></button>
   </div>
   </div>
 </nav> 

@@ -1,16 +1,30 @@
+{include file="header.tpl"}
 
-<h1>Lista categorias</h1>
+{include file="buscarXCategoria.tpl"}
+
 <div class="container">
-    <ul class="list-group">
 
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <h1>Lista Categorias</h1>
+        </div>
+    </div>
+
+
+    <ul class="container">
         {foreach from=$categorias item=categoria}
-            <li class="list-group-item list-group-item-primary formprod">{$categoria->descripcion}</li>
-            <div class="btnsXprod">
-                <button type="button" class="btn btn-outline-info"><a href="categoria/vermas/{$categoria->id_categoria}">Ver productos de esta categoria</a></button>    
-                <button type="button" class="btn btn-outline-danger"><a href="categoria/borrar/{$categoria->id_categoria}">Borrar</a></button> 
+         <div class="container">
+            <div class="row justify-content-center align-items-center mt-4">
+                <div class="col-7">
+                    <li class="list-group-item list-group-item-primary">{$categoria->descripcion}</li>
+                </div>
             </div>
+        </div>
         {/foreach}
-</ul>
+    </ul>
+
 </div>
-{include file="crearCategoria.tpl"}
+
+
+{include file="footer.tpl"}
   

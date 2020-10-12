@@ -1,21 +1,35 @@
 {include file="header.tpl"}
 
-<h1>{$titulo}</h1>
-<div class="container">
-    <ul class="list-group">
+ <div class="container">
 
-        {foreach from=$productos item=producto}
-            <li class="list-group-item list-group-item-primary formprod">{$producto->nombre}</li>
-            <div class="btnsXprod">
-                <button type="button" class="btn btn-outline-info"><a href="productos/vermas/{$producto->nombre}">Ver descripción</a></button>
-                <button type="button" class="btn btn-outline-dark"><a href="productos/editar/{$producto->id}">Editar</a></button>
-                <button type="button" class="btn btn-outline-danger"><a href="productos/borrar/{$producto->id}">Borrar</a></button> 
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <h1>Lista Productos</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col -2">
+                <ul>
+                    {foreach from=$productos item=producto}
+                        <div class="container">
+                            <div class="row justify-content-center align-items-center mt-4 pl-5 pr-4">
+                                <div class="col-8 ">
+                                    <li class="list-group-item list-group-item-primary">{$producto->nombre} - 
+                                    Categoria: {$producto->id_categoria} </li>
+                                </div>
+                                <div class="col -1">
+                                    <button type="button" class="btn btn-outline-info"><a href="vermas/{$producto->id}">Detalle</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    {/foreach}
+                
+                </ul>
             </div>
-        {/foreach}
-</ul>
+        </div>
+    </div>
 
-{include file="crearProducto.tpl"}
+</div>
 
-
-  
 {include file="footer.tpl"} 
